@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Funcionários</title>
+    <style>
+        body,
+        h2,
+        form,
+        div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        #formFuncionario {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Cadastro de Funcionário</h2>
+    <form id="formFuncionario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade">
+
+        <label for="cargo">Cargo:</label>
+        <select id="cargo" name="cargo">
+            <option value="Funcionario">Funcionário</option>
+            <option value="Gerente">Gerente</option>
+            <option value="Desenvolvedor">Desenvolvedor</option>
+        </select>
+
+        <label for="departamento">Departamento (somente para Gerente):</label>
+        <input type="text" id="departamento" name="departamento">
+
+        <label for="linguagem">Linguagem (somente para Desenvolvedor):</label>
+        <input type="text" id="linguagem" name="linguagem">
+
+        <button type="button" onclick="cadastrarFuncionario()">Cadastrar Funcionário</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
